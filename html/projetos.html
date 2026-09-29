@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONG - Projetos Sociais</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Projetos Sociais</h1>
+    </header>
+
+  <nav class="menu">
+    <button class="menu-hamburguer" type="button" aria-label="Abrir menu">
+        ☰
+    </button>
+
+    <div class="menu-links">
+        <a href="index.html">Início</a>
+
+        <div class="dropdown">
+            <a href="projetos.html">Projetos Sociais</a>
+
+            <div class="submenu">
+                <a href="projetos.html">Voluntariado</a>
+                <a href="projetos.html">Doações</a>
+            </div>
+        </div>
+
+        <a href="cadastro.html">Cadastro</a>
+    </div>
+</nav>
+
+    <main>
+
+        <section>
+            <h2>Nossos Projetos</h2>
+            <p>
+                Conheça as iniciativas e frentes de atuação desenvolvidas
+                pela nossa ONG em benefício da comunidade.
+            </p>
+        </section>
+<div class="grid">
+<section class="col-6">
+                <h2>Voluntariado</h2>
+
+<span class="badge">Participação</span>
+
+            <p>
+                Você pode participar das atividades desenvolvidas pela ONG
+                e contribuir com seu tempo e conhecimento.
+            </p>
+
+            <a href="cadastro.html">Quero ser voluntário</a>
+        </section>
+
+<section class="col-6">
+                <h2>Doações</h2>
+
+<span class="badge">Contribuição</span>
+
+            <p>
+                Sua contribuição financeira ajuda a manter nossos projetos
+                e ampliar o atendimento à comunidade.
+            </p>
+
+            <a href="cadastro.html">Quero contribuir</a>
+
+<button type="button" id="abrir-modal">Saiba mais</button>
+
+        </section>
+        
+        </div>
+
+<div id="modal-doacao" class="modal" role="dialog"
+     aria-modal="true" aria-labelledby="titulo-modal">
+
+    <div class="modal-conteudo">
+        <h2 id="titulo-modal">Como sua doação ajuda</h2>
+
+        <p>
+            As doações ajudam a manter os projetos sociais da ONG
+            e ampliar o atendimento à comunidade.
+        </p>
+
+        <button type="button" id="fechar-modal">Fechar</button>
+    </div>
+
+</div>
+
+    </main>
+
+    <footer>
+        <p>ONG Solidariedade</p>
+    </footer>
+<script src="../js/script.js"></script>
+</body>
+
+</html>
