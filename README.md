@@ -49,6 +49,10 @@ projeto-ong/
 - .gitignore
 - README.md
 
+## Acessibilidade
+
+O projeto utiliza práticas básicas de acessibilidade, como HTML semântico, textos alternativos em imagens, associação entre `label` e campos de formulário, além do uso de `fieldset` e `legend` para organizar os dados. Também foram utilizados atributos `role` em elementos de interação e feedback.
+
 ## Versionamento
 
 O projeto utiliza Git e GitHub para controle de versões, seguindo uma organização baseada no GitFlow.
