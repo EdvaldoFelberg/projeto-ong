@@ -15,12 +15,16 @@
     </header>
 
     <nav class="menu">
-    <button class="menu-hamburguer" type="button" aria-label="Abrir menu">
+<button class="menu-hamburguer"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="menu-links">        
         ☰
     </button>
 
-    <div class="menu-links">
-<a href="#inicio">Início</a>
+<div class="menu-links" id="menu-links">
+    <a href="#inicio">Início</a>
 
         <div class="dropdown">
 <a href="#projetos">Projetos Sociais</a>
