@@ -9,8 +9,8 @@ const templateInicio = `
         <h2>Sobre a ONG</h2>
 
         <picture>
-            <source srcset="/imagens/ong.webp" type="image/webp">
-            <img src="/imagens/ong.jpg"
+<source srcset="${import.meta.env.BASE_URL}imagens/ong.webp" type="image/webp">
+<img src="${import.meta.env.BASE_URL}imagens/ong.jpg"
                  alt="Equipe de voluntários participando das ações da ONG">
         </picture>
 

@@ -4,6 +4,9 @@ import { fileURLToPath } from 'node:url';
 export default defineConfig({
     root: '.',
 
+    // Caminho base utilizado no GitHub Pages
+    base: '/projeto-ong/',
+
     build: {
         outDir: 'dist',
         emptyOutDir: true,
