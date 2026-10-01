@@ -65,9 +65,29 @@ Branches utilizadas:
 
 Os commits são organizados utilizando o padrão de commits semânticos.
 
-## Execução do projeto
+## Pré-requisitos
 
-Para executar o projeto localmente, abra a pasta no Visual Studio Code e utilize um servidor local, como a extensão Live Server. Em seguida, acesse o arquivo `html/index.html` pelo navegador.
+Para executar o projeto localmente é necessário:
+
+- Navegador web atualizado;
+- Visual Studio Code ou outro editor de código;
+- Servidor local, como a extensão Live Server do Visual Studio Code;
+- Git instalado, caso seja necessário clonar o repositório.
+
+## Instalação e execução local
+
+1. Clone o repositório utilizando o comando:
+   `git clone https://github.com/EdvaldoFelberg/projeto-ong.git`
+
+2. Abra a pasta `projeto-ong` no Visual Studio Code.
+
+3. Inicie um servidor local utilizando a extensão Live Server.
+
+4. Acesse o arquivo `html/index.html` pelo servidor local.
+
+5. A aplicação será aberta no navegador, permitindo acessar as páginas e funcionalidades do projeto.
+
+O projeto utiliza HTML, CSS e JavaScript no front-end e não necessita de instalação de dependências adicionais para sua execução atual.
 
 ## Autor
 
