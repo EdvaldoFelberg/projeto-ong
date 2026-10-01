@@ -13,7 +13,10 @@ export default defineConfig({
 
         rollupOptions: {
             input: {
-                index: fileURLToPath(
+                principal: fileURLToPath(
+                    new URL('./index.html', import.meta.url)
+                ),
+                inicio: fileURLToPath(
                     new URL('./html/index.html', import.meta.url)
                 ),
                 projetos: fileURLToPath(
