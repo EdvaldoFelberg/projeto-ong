@@ -18,6 +18,12 @@
     --cor-texto-secundario: #52606D;
     --cor-borda: #CBD5E1;
 
+    /* Cores para o modo de alto contraste */
+    --alto-contraste-fundo: #000000;
+    --alto-contraste-superficie: #000000;
+    --alto-contraste-texto: #FFFFFF;
+    --alto-contraste-destaque: #FFFF00;
+
     /* Tipografia */
     --fonte-principal: Arial, sans-serif;
     --texto-xs: 0.875rem;
@@ -367,4 +373,51 @@ input:user-invalid {
     align-items: center;
     gap: var(--espaco-sm);
     margin-top: var(--espaco-md);
+}
+
+/* Modo de alto contraste */
+body.alto-contraste {
+    --cor-primaria: var(--alto-contraste-destaque);
+    --cor-secundaria: var(--alto-contraste-destaque);
+    --cor-destaque: var(--alto-contraste-destaque);
+    --cor-fundo: var(--alto-contraste-fundo);
+    --cor-superficie: var(--alto-contraste-superficie);
+    --cor-texto: var(--alto-contraste-texto);
+    --cor-texto-secundario: var(--alto-contraste-texto);
+    --cor-borda: var(--alto-contraste-destaque);
+}
+
+body.alto-contraste header,
+body.alto-contraste footer {
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+body.alto-contraste a,
+body.alto-contraste h2 {
+    color: var(--alto-contraste-destaque);
+}
+
+body.alto-contraste button {
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-destaque);
+    border-color: var(--alto-contraste-destaque);
+}
+
+body.alto-contraste button:focus,
+body.alto-contraste a:focus,
+body.alto-contraste input:focus {
+    outline-color: var(--alto-contraste-destaque);
+}
+
+/* Imagens responsivas */
+picture {
+    display: block;
+    width: 100%;
+}
+
+picture img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }

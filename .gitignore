@@ -4,3 +4,16 @@ Thumbs.db
 
 # Configurações locais do editor
 .vscode/
+
+# Dependências do Node.js
+node_modules/
+
+# Build de produção do Vite
+dist/
+
+# Arquivos de log
+*.log
+
+# Arquivos locais de ambiente
+.env
+.env.local

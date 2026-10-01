@@ -9,8 +9,8 @@ const templateInicio = `
         <h2>Sobre a ONG</h2>
 
         <picture>
-            <source srcset="../imagens/ong.webp" type="image/webp">
-            <img src="../imagens/ong.jpg"
+            <source srcset="/imagens/ong.webp" type="image/webp">
+            <img src="/imagens/ong.jpg"
                  alt="Equipe de voluntários participando das ações da ONG">
         </picture>
 
@@ -28,16 +28,6 @@ const templateInicio = `
         <p><strong>Endereço:</strong> Rua Exemplo, 123 - Centro</p>
     </section>
 `;
-
-function renderizarInicio() {
-    if (conteudoPrincipal) {
-        conteudoPrincipal.innerHTML = templateInicio;
-    }
-}
-
-if (!window.location.hash || window.location.hash === '#inicio') {
-    renderizarInicio();
-}
 
 // SPA - conteúdo dinâmico da página de projetos
 const templateProjetos = `
@@ -80,8 +70,10 @@ const templateProjetos = `
         </section>
     </div>
 
-    <div id="modal-doacao" class="modal" role="dialog"
-         aria-modal="true" aria-labelledby="titulo-modal">
+    <div id="modal-doacao" class="modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="titulo-modal">
 
         <div class="modal-conteudo">
             <h2 id="titulo-modal">Como sua doação ajuda</h2>
@@ -101,7 +93,8 @@ const templateCadastro = `
     <h2>Faça seu cadastro</h2>
 
     <div class="alerta" role="alert">
-        <strong>Atenção:</strong> Preencha todos os campos obrigatórios antes de enviar o cadastro.
+        <strong>Atenção:</strong>
+        Preencha todos os campos obrigatórios antes de enviar o cadastro.
     </div>
 
     <form>
@@ -110,22 +103,33 @@ const templateCadastro = `
 
             <p>
                 <label for="nome">Nome completo:</label>
-                <input type="text" id="nome" name="nome" required>
+                <input type="text"
+                       id="nome"
+                       name="nome"
+                       required>
             </p>
 
             <p>
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email"
+                       id="email"
+                       name="email"
+                       required>
             </p>
 
             <p>
                 <label for="nascimento">Data de nascimento:</label>
-                <input type="date" id="nascimento" name="nascimento" required>
+                <input type="date"
+                       id="nascimento"
+                       name="nascimento"
+                       required>
             </p>
 
             <p>
                 <label for="cpf">CPF:</label>
-                <input type="text" id="cpf" name="cpf"
+                <input type="text"
+                       id="cpf"
+                       name="cpf"
                        maxlength="14"
                        pattern="[0-9]{3}\\.[0-9]{3}\\.[0-9]{3}-[0-9]{2}"
                        placeholder="000.000.000-00"
@@ -134,7 +138,9 @@ const templateCadastro = `
 
             <p>
                 <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone"
+                <input type="tel"
+                       id="telefone"
+                       name="telefone"
                        maxlength="15"
                        pattern="\\([0-9]{2}\\) [0-9]{5}-[0-9]{4}"
                        placeholder="(00) 00000-0000"
@@ -147,7 +153,9 @@ const templateCadastro = `
 
             <p>
                 <label for="cep">CEP:</label>
-                <input type="text" id="cep" name="cep"
+                <input type="text"
+                       id="cep"
+                       name="cep"
                        maxlength="9"
                        pattern="[0-9]{5}-[0-9]{3}"
                        placeholder="00000-000"
@@ -156,31 +164,57 @@ const templateCadastro = `
 
             <p>
                 <label for="endereco">Endereço:</label>
-                <input type="text" id="endereco" name="endereco" required>
+                <input type="text"
+                       id="endereco"
+                       name="endereco"
+                       required>
             </p>
 
             <p>
                 <label for="cidade">Cidade:</label>
-                <input type="text" id="cidade" name="cidade" required>
+                <input type="text"
+                       id="cidade"
+                       name="cidade"
+                       required>
             </p>
 
             <p>
                 <label for="estado">Estado:</label>
-                <input type="text" id="estado" name="estado" required>
+                <input type="text"
+                       id="estado"
+                       name="estado"
+                       required>
             </p>
         </fieldset>
 
-<div class="acoes-formulario">
-    <button type="submit">Enviar cadastro</button>
-    <button type="button" id="limpar-cadastro">Limpar cadastro</button>
-</div>
+        <div class="acoes-formulario">
+            <button type="submit">Enviar cadastro</button>
+            <button type="button" id="limpar-cadastro">
+                Limpar cadastro
+            </button>
+        </div>
     </form>
 
-    <div id="toast" class="toast" role="status" aria-live="polite">
+    <div id="toast"
+         class="toast"
+         role="status"
+         aria-live="polite">
         Cadastro preenchido corretamente!
     </div>
 `;
 
+function renderizarInicio() {
+    if (conteudoPrincipal) {
+        conteudoPrincipal.innerHTML = templateInicio;
+    }
+}
+
+// Renderiza a página inicial quando não existe uma rota definida
+if (!window.location.hash || window.location.hash === '#inicio') {
+    renderizarInicio();
+}
+
+// Renderiza as rotas da SPA
 function renderizarRota() {
     if (!conteudoPrincipal) {
         return;
@@ -188,10 +222,11 @@ function renderizarRota() {
 
     const rota = window.location.hash || '#inicio';
 
-    if (rota === '#projetos' ||
+    if (
+        rota === '#projetos' ||
         rota === '#voluntariado' ||
-        rota === '#doacoes') {
-
+        rota === '#doacoes'
+    ) {
         conteudoPrincipal.innerHTML = templateProjetos;
 
         if (rota === '#voluntariado') {
@@ -204,16 +239,18 @@ function renderizarRota() {
 
         configurarModal();
 
-} else if (rota === '#cadastro') {
-    conteudoPrincipal.innerHTML = templateCadastro;
-configurarCadastro();
+    } else if (rota === '#cadastro') {
+        conteudoPrincipal.innerHTML = templateCadastro;
 
-} else if (rota === '#inicio') {
-    conteudoPrincipal.innerHTML = templateInicio;
+        configurarCadastro();
+
+    } else if (rota === '#inicio') {
+        conteudoPrincipal.innerHTML = templateInicio;
+    }
 }
 
-}
-
+// Atualiza o conteúdo quando a rota é alterada
 window.addEventListener('hashchange', renderizarRota);
 
+// Renderização inicial
 renderizarRota();
